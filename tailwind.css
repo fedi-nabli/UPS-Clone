@@ -1,3 +1,27 @@
+.static {
+  position: static
+}
+
+.fixed {
+  position: fixed
+}
+
+.absolute {
+  position: absolute
+}
+
+.relative {
+  position: relative
+}
+
+.block {
+  display: block
+}
+
+.inline {
+  display: inline
+}
+
 .flex {
   display: flex
 }
@@ -6,9 +30,16 @@
   display: none
 }
 
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity))
+.border {
+  border-width: 1px
+}
+
+.uppercase {
+  text-transform: uppercase
+}
+
+.capitalize {
+  text-transform: capitalize
 }
 
 .text-blue-500 {

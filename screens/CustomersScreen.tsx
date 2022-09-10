@@ -9,7 +9,7 @@ const CustomersScreen = () => {
     <SafeAreaView>
       <Text style={tailwind('text-blue-500')}>CustomersScreen</Text>
     </SafeAreaView>
-  )
-}
+  );
+};
 
-export default CustomersScreen
+export default CustomersScreen;
