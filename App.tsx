@@ -3,10 +3,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import {TailwindProvider} from 'tailwind-rn';
 import utilities from './tailwind.json';
 import RootNavigator from './navigator/RootNavigator';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
+
+const STEPZEN_API_KEY = process.env.STEPZEN_API_KEY;
 
 const client = new ApolloClient({
-  uri: 'http://localhost:5001/api/ringed-hare',
+  headers: {
+    Authorization: `Apikey ${STEPZEN_API_KEY}`
+  },
+  uri: 'https://esquel.stepzen.net/api/ringed-hare/__graphql',
   cache: new InMemoryCache(),
 });
 

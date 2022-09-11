@@ -9,7 +9,7 @@ type CustomerList = {
 };
 
 type TrackingItems = {
-  custoemr_id: ID;
+  customer_id: ID;
   customer: Customer;
   items: Item[];
 };

@@ -21,7 +21,7 @@ const useCustomerOrders = (userId: string) => {
       Lng: value.Lng
     }));
 
-    const customerOrders = orders.filter(order => order.trackingItems.custoemr_id === userId);
+    const customerOrders = orders.filter(order => order.trackingItems.customer_id === userId);
 
     setOrders(customerOrders);
   }, [data, userId])
