@@ -10,5 +10,7 @@ npm-debug.*
 *.orig.*
 web-build/
 
+stepzen/
+
 # macOS
 .DS_Store
