@@ -2,6 +2,8 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { Card, Icon } from '@rneui/themed';
 import { useTailwind } from 'tailwind-rn/dist';
+import { useNavigation } from '@react-navigation/native';
+import { OrdersScreenNavigationProp } from '../screens/OrdersScreen';
 
 type Props = {
   item: Order;
@@ -9,9 +11,10 @@ type Props = {
 
 const OrderCard = ({item}: Props) => {
   const tailwind = useTailwind();
+  const navigation = useNavigation<OrdersScreenNavigationProp>();
 
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.navigate('Order', {order: item})}>
       <Card containerStyle={tailwind('px-5 rounded-lg')}>
         <View style={tailwind('flex-row justify-between items-center')}>
           <View>
